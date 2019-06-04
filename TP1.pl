@@ -83,4 +83,4 @@ tio(Tio,Sobrino):- hermano(Tio,Padre),hijo(Sobrino,Padre).
 
 abuelo(Abuelo,Nieto):- persona(Abuelo),persona(Nieto),hijo(Padre,Abuelo),hijo(Nieto,Padre).
 
-primo(A,B):- hermano(Padre1,Padre2),hijo(A,Padre1),hijo(B,Padre2),Padre1\=Padre2.
+primo(A,B):- tio(C,A),hijo(B,C).
